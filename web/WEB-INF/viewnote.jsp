@@ -1,7 +1,7 @@
 <%-- 
     Document   : viewnote
     Created on : 29-09-2022, 22:50:12
-    Author     : Victory
+    Author     : Long
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -14,8 +14,8 @@
     <body>
         <h1>Simple Note Keeper</h1>
         <h2>View Note</h2>
-        <p><b>Title:</b> ${note.title}</p>
-        <p><b>Contents:</b><br>${note.content}</p>
+        <p><b>Title: </b> ${note.title}</p>
+        <p><b>Contents: </b><br>${note.content}</p>
         <a href="note?edit">Edit</a>
     </body>
 </html>
