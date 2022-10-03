@@ -1,4 +1,4 @@
-
+package servlets;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -21,8 +21,6 @@ public class NoteServlet extends HttpServlet {
 
         BufferedReader br = new BufferedReader(new FileReader(new File(path)));
         
-        PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(path, false)));
-
         String title = br.readLine();
         String content = "";
 
@@ -55,8 +53,7 @@ public class NoteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String path = getServletContext().getRealPath("/WEB-INF/note.txt");
-        BufferedReader br = new BufferedReader(new FileReader(new File(path)));
-
+        
         PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(path, false)));
         String title = request.getParameter("title");
         String content = request.getParameter("content");
